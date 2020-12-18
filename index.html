@@ -59,94 +59,71 @@
         </header>
 
         <main>
-            <p class="header">โปรแกรมคำนวณโปรโมชั่น</p>
-
             <div class="item-list">
                 <table class="item-table" id="item-list">
-                    <tr>
-                        <td class="title">
-                            <span>
-                                <p>รายการ</p>
-                            </span>
-                        </td>
+                    <caption class="header">โปรแกรมคำนวณโปรโมชั่น</caption>
 
-                        <td class="title">
-                            <span>
-                                <p>ราคา</p>
-                            </span>
-                        </td>
+                    <thead>
+                        <tr>
+                            <th scope="col">รายการ</th>
+                            <th scope="col">ราคา</th>
+                            <th scope="col">จำนวน</th>
+                            <th scope="col">แก้ไข</th>
+                            <th scope="col">ลบ</th>
+                        </tr>
+                    </thead>
 
-                        <td colspan="3" class="title">
-                            <span>
-                                <p>จำนวน</p>
-                            </span>
-                        </td>
-                    </tr>
+                    <tbody>
+                        <tr v-for="item, index in itemData" class="item-section">
+                            <td scope="row" data-label="รายการ" class="name-col">
+                                {{ (index + 1) }}. {{ item.name }}
+                            </td>
 
-                    <tr v-for="item, index in itemData">
-                        <td class="name-col">
-                            {{ (index + 1) }}. {{ item.name }}
-                        </td>
+                            <td data-label="ราคา">
+                                {{ parseInt(item.price).toLocaleString() }} ( {{ (parseInt(item.price) * parseInt(item.amount)).toLocaleString() }} )
+                            </td>
 
-                        <td class="price-col">
-                            {{ parseInt(item.price).toLocaleString() }} ( {{ (parseInt(item.price) * parseInt(item.amount)).toLocaleString() }} )
-                        </td>
+                            <td data-label="จำนวน">
+                                {{ parseInt(item.amount).toLocaleString() }}
+                            </td>
 
-                        <td class="amount-col">
-                            {{ parseInt(item.amount).toLocaleString() }}
-                        </td>
+                            <td data-label="แก้ไข">
+                                <i class="fa fa-edit editBtn" @click="editItem(index)"></i>
+                            </td>
 
-                        <td width="5%">
-                            <i class="fa fa-edit editBtn" @click="editItem(index)"></i>
-                        </td>
+                            <td data-label="ลบ">
+                                <i class="fa fa-trash deleteBtn" @click="delItem(index)"></i>
+                            </td>
+                        </tr>
 
-                        <td width="8%">
-                            <i class="fa fa-trash deleteBtn" @click="delItem(index)"></i>
-                        </td>
-                    </tr>
+                        <tr class="item-section">
+                            <th class="title">รวม</th>
+                            <td data-label="รวม" class="total" colspan="4">
+                                <span ref="total">0</span>
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <td colspan="4" class="title">
-                            <span>
-                                รวม
-                            </span>
-                        </td>
+                        <tr class="item-section">
+                            <th class="title">ส่วนลด</th>
+                            <td data-label="ส่วนลด" class="discount" colspan="4">
+                                <span ref="discount">0</span>
+                            </td>
+                        </tr>
 
-                        <td class="total">
-                            <span ref="total">0</span>
-                        </td>
-                    </tr>
+                        <tr class="item-section">
+                            <th class="title">ราคาสุทธิ</th>
+                            <td data-label="ราคาสุทธิ" class="net" colspan="4">
+                                <span ref="nettotal">0</span>
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <td colspan="4" class="title">
-                            <span>
-                                <p>ส่วนลด</p>
-                            </span>
-                        </td>
-
-                        <td class="discount">
-                            <span ref="discount">0</span>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td colspan="4" class="title">
-                            <span>
-                                ราคาสุทธิ
-                            </span>
-                        </td>
-
-                        <td class="net">
-                            <span ref="nettotal">0</span>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td colspan="5">
-                            <button type="submit" class="addBtn" @click="showModal('add')">เพิ่มสินค้า</button>
-                            <button type="submit" class="calcBtn" @click="calcPromo">คำนวณ</button>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <button type="submit" class="addBtn" @click="showModal('add')">เพิ่มสินค้า</button>
+                                <button type="submit" class="calcBtn" @click="calcPromo">คำนวณ</button>
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
 
                 <!-- ########## ADD MODAL ########## -->
