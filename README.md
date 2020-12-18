@@ -8,13 +8,13 @@ This website make for calculate a promotions of Harry Potter Books.
 
 ### Website Views
 
-![Main](https://ibb.co/gPTjh7n)
+![Main](https://i.ibb.co/CM71Dtr/Ban-Nai-Din-1.png)
 
-![Add item](https://ibb.co/frVFMKY)
+![Add item](https://i.ibb.co/P1sjxbZ/Ban-Nai-Din-2.png)
 
-![After Added](https://ibb.co/56z0y94)
+![After Added](https://i.ibb.co/g3X2p79/Ban-Nai-Din-3.png)
 
-![Edit item](https://ibb.co/TMJTPVP)
+![Edit item](https://i.ibb.co/SwHxVhV/Ban-Nai-Din-4.png)
 
 ## Authors
 
