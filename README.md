@@ -6,6 +6,8 @@ This project is for apply job.
 
 This website make for calculate a promotions of Harry Potter Books.
 
+### [Demo here!](https://hopeful-bardeen-d98f9d.netlify.app/)
+
 ### Website Views
 
 ![Main](https://i.ibb.co/yYyf7R3/Ban-Nai-Din-1.png)
