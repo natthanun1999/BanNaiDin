@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    background-color: #816C5B;
+    color: #FFF;
+}
+
+.container {
+    width: 100vw;
+    height: auto;
+    text-align: center;
+}
+
+header {
+    padding: 4vh 0vw;
+}
+
+header p {
+    font-size: 30px;
+}
+
+main .header {
+    font-size: 22px;
+}
+
+main .item-list .title:first-child {
+    text-align: left;
+    font-size: 22px;
+    padding-left: 10px;
+}
+
+main .item-list .title {
+    text-align: left;
+    font-size: 22px;
+}
+
+main .item-list .total {
+    text-align: right;
+    font-size: 22px;
+    padding-right: 10px;
+}
+
+main .item-list .discount {
+    text-align: right;
+    font-size: 22px;
+    padding-right: 10px;
+}
+
+main .item-list .net {
+    text-align: right;
+    font-size: 22px;
+    padding-right: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+    main .item-list .item-table {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    main .item-list .item-table {
+        width: 60%;
+    }
+}
+
+main .item-list .item-table {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    border: 3px solid #473b31;
+    border-radius: 5px;
+}
+
+main .item-list .item-table .name-col {
+    text-align: left;
+    padding-left: 15px;
+    font-size: 18px;
+}
+
+main .item-list .item-table .price-col {
+    text-align: left;
+    width: 22%;
+    font-size: 18px;
+}
+
+main .item-list .item-table .amount-col {
+    text-align: left;
+    width: 22%;
+    font-size: 18px;
+}
+
+main .item-list input {
+    border: 2px solid #1e272e;
+    height: 30px;
+    margin: 3px;
+    padding-left: 5px;
+}
+
+main .item-list select {
+    border: 2px solid #1e272e;
+    width: 165px;
+    height: 30px;
+    margin: 3px;
+    padding-left: 5px;
+}
+
+main .item-list .addBtn {
+    width: 80px;
+    height: 36px;
+    background-color: #8ACE43;
+    border: none;
+    color: whitesmoke;
+    transition: .5s;
+    margin: 3px;
+    font-size: 16px;
+}
+
+main .item-list .addBtn:hover {
+    cursor: pointer;
+    background-color: #7abe43;
+}
+
+main .item-list .calcBtn {
+    width: 80px;
+    height: 36px;
+    background-color: #a55eea;
+    border: none;
+    color: whitesmoke;
+    transition: .5s;
+    margin: 3px;
+    font-size: 16px;
+}
+
+main .item-list .calcBtn:hover {
+    cursor: pointer;
+    background-color: #8854d0;
+}
+
+main .item-list .editBtn:hover {
+    cursor: pointer;
+}
+
+main .item-list .deleteBtn:hover {
+    cursor: pointer;
+}
+
+main .item-list .confirmBtn {
+    width: 80px;
+    height: 36px;
+    background-color: #8ACE43;
+    border: none;
+    color: whitesmoke;
+    transition: .5s;
+    margin-bottom: 3px;
+    font-size: 16px;
+}
+
+main .item-list .confirmBtn:hover {
+    cursor: pointer;
+    background-color: #7abe43;
+}
+
+main .item-list .cancelBtn {
+    width: 80px;
+    height: 36px;
+    background-color: salmon;
+    border: none;
+    color: whitesmoke;
+    transition: .5s;
+    margin-bottom: 3px;
+    font-size: 16px;
+}
+
+main .item-list .cancelBtn:hover {
+    cursor: pointer;
+    background-color: tomato;
+}
+
+
+/****************** MODAL ******************/
+
+.modal-mask {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: table;
+    transition: opacity 0.3s ease;
+}
+
+.modal-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 400px) {
+    .modal-container {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .modal-container {
+        width: 300px;
+    }
+}
+
+.modal-container {
+    height: auto;
+    margin: 0px auto;
+    padding: 20px 30px;
+    background-color: #A9A18C;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+    transition: all 0.3s ease;
+}
+
+.modal-table {
+    width: 80%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    border: 3px solid #473b31;
+    border-radius: 5px;
+}
+
+.modal-header h3 {
+    margin-top: 0;
+    color: #42b983;
+}
+
+.modal-body {
+    margin: 20px 0;
+}
+
+.modal-default-button {
+    float: right;
+}
+
+
+/*
+ * The following styles are auto-applied to elements with
+ * transition="modal" when their visibility is toggled
+ * by Vue.js.
+ *
+ * You can easily play with the modal transition by editing
+ * these styles.
+ */
+
+.modal-enter {
+    opacity: 0;
+}
+
+.modal-leave-active {
+    opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
