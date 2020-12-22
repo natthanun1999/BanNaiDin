@@ -14,32 +14,32 @@ var app = new Vue({
             {
                 id: "0002",
                 name: "Harry Potter 2 แฮร์รี่ พอตเตอร์ 2 กับห้องแห่งความลับ",
-                price: "100"
+                price: "110"
             },
             {
                 id: "0003",
                 name: "Harry Potter 3 แฮร์รี่ พอตเตอร์ 3 กับนักโทษแห่งอัซคาบัน",
-                price: "100"
+                price: "120"
             },
             {
                 id: "0004",
                 name: "Harry Potter 4 แฮร์รี่ พอตเตอร์ 4 กับถ้วยอัคนี",
-                price: "100"
+                price: "130"
             },
             {
                 id: "0005",
                 name: "Harry Potter 5 แฮร์รี่ พอตเตอร์ 5 กับภาคีนกฟีนิกซ์",
-                price: "100"
+                price: "140"
             },
             {
                 id: "0006",
                 name: "Harry Potter 6 แฮร์รี่ พอตเตอร์ 6 กับเจ้าชายเลือดผสม",
-                price: "100"
+                price: "150"
             },
             {
                 id: "0007",
                 name: "Harry Potter 7 แฮร์รี่ พอตเตอร์ 7 กับเครื่องรางยมฑูต",
-                price: "100"
+                price: "160"
             }
         ],
         itemData: [],
