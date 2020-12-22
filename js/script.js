@@ -67,6 +67,12 @@ var app = new Vue({
 
             if (!this.isEmpty([price_box, amount_box])) {
                 if (this.isNumber([price_box, amount_box])) {
+                    //Amount check
+                    if (parseInt(amount_box) < 1) {
+                        alert('Error : Please enter more than 1.')
+                        return;
+                    }
+
                     this.itemData.push({
                         id: this.books[this.selectIndex.value].id,
                         name: this.books[this.selectIndex.value].name,
@@ -118,6 +124,12 @@ var app = new Vue({
 
             if (!this.isEmpty([name_box, price_box, amount_box])) {
                 if (this.isNumber([price_box, amount_box])) {
+                    //Amount check
+                    if (parseInt(amount_box) < 1) {
+                        alert('Error : Please enter more than 1.')
+                        return;
+                    }
+                    
                     this.itemData[index] = {
                         id: this.books[this.selectIndex.value].id,
                         name: name_box,
